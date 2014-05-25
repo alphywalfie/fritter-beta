@@ -1,0 +1,2 @@
+module FritsHelper
+end

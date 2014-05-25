@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fritter</title>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'/>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'/>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!--SIDEBAR-->
+<div id="navbar">
+<ul>
+	<div><li><%= link_to('Fritter Home', root_path) %></li></div>
+	<% if user_signed_in? %>
+		<div><li><%= link_to "New Frit", new_frit_path %></li></div>
+		<div><li><%= link_to "Your Frits", frits_path %> </li></div>
+		<div><li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li></div>
+	<% else %>
+		<div><li><%= link_to('Login', new_user_session_path) %></li></div>
+		<div><li><%= link_to('Register', new_user_registration_path) %> </li></div>
+	<% end %>
+</div>
+<div id = "navbottom">
+	<span id = "title">Fritter</span>
+	<div id = "about" class = "monospace">The "free-writing Twitter." Sign up, sign in, get cooking. <br/> Brought to you by sadtrashhobo and aporro-senpai.</div>
+</div>
+
+<!--MAIN VIEW-->
+<div class="container">
+<%= yield %>
+</div>
+
+</body>
+</html>

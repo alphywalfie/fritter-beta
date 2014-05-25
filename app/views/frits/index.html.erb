@@ -1,0 +1,33 @@
+<!--
+Heavily modeled after:
+Source: Obtained from: http://tympanus.net/codrops/2012/11/19/responsive-css-timeline-with-3d-effect/
+Date: May 23, 2014
+Name of Author: Mary Lou
+-->
+<h1>Your frits</h1>
+<ul class = "frits_list">
+	<% (@frits).reverse_each do |frit| %>
+	<li class = "frit">
+		<label>
+        <input type="radio" name="tl-group"/>
+        <div id="top"></div>
+		<div class="date">
+			<span class = "monospace">
+				Posted on <%= frit.posted_on %>
+			</span>
+		</div>
+        <div class="content-perspective">
+            <div class="content">
+                <div class="content-inner">
+                    <h3>A <%= frit.limit %> story about <%= frit.prompt %></h3>
+                    <p><%= frit.content %>
+                        <br/><div class = "monospace"> <%= link_to("EDIT", edit_frit_path(frit.id)) %>
+                            <%= link_to("DELETE", frit_path(frit.id), method: :delete, data: {confirm: "Are you sure you want to delete this frit?" }) %> </div>
+                    </p>		
+                </div>
+            </div>
+        </div>
+        </label>
+    </li>
+	<% end %> 
+</ul>

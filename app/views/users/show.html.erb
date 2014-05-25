@@ -1,0 +1,31 @@
+<h1>Viewing <%=@show_user.first%>'s Frits</h1>
+<!--
+Heavily modeled after:
+Source: Obtained from: http://tympanus.net/codrops/2012/11/19/responsive-css-timeline-with-3d-effect/
+Date: May 23, 2014
+Name of Author: Mary Lou
+-->
+<ul class = "frits_list">
+	<% (@frits).reverse_each do |frit| %>
+	<li class = "frit">
+		<label>
+		<input type = "radio" name = "tl-group"/>
+		<div id = "top">&#8942;</div>
+		<div class="date">
+			<span class = "monospace">
+				Posted on <%= frit.posted_on %>
+			</span>
+		</div>
+        <div class="content-perspective">
+            <div class="content">
+                <div class="content-inner">
+                    <h3>A <%= frit.limit %> story about <%= frit.prompt %></h3>
+                    <p><%= frit.content %></p>
+                </div>
+            </div>
+        </div>
+        </label>
+    </li>
+	<% end %> 
+</ul>
+

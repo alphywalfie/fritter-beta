@@ -1,0 +1,43 @@
+p {
+	color: #354a49;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+#frit_form {
+	margin-bottom: 75px;
+	margin-right: 25%;
+	font-family: sans-serif;
+	text-align: left;
+}
+
+.read_only {
+	width: 460px;
+	padding: 15px;
+	border: 8px solid #354a49;
+	display: inline-block;
+	font-size: 18px;
+	font-family: 'Inconsolata', sans-serif;
+	text-align: center;
+	background-color: rgba(255,255,255,0.8);
+}
+
+#new_frit {
+	font-size: 15px;
+	font-family: 'Inconsolata', sans-serif;
+	float: right;
+}
+
+#submit_frit {
+	width: 100px;
+	height: 30px;
+	float: right;
+	margin-right:75px;
+}
+
+#message {
+	font-size: 25px;
+	font-family: 'Inconsolata', sans-serif;
+	text-align: left
+}
