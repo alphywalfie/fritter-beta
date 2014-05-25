@@ -6,7 +6,7 @@ Date: May 23, 2014
 Name of Author: Mary Lou
 -->
 <ul class = "frits_list">
-	<% (@frits)_each do |frit| %>
+	<% (@frits).reverse_each do |frit| %>
 	<li class = "frit">
         <label>
         <input type="radio" name="tl-group"/>
