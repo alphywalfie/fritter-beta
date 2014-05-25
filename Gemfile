@@ -40,8 +40,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'fastercsv' # Only required on Ruby 1.8 and below
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-#gem 'rails_admin', :git => 'http://github.com/sferik/rails_admin.git'
+#gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin', :git => 'http://github.com/sferik/rails_admin.git'
 gem 'cancan'
 #gem 'font-awesome-less'
 #gem 'activeadmin'
